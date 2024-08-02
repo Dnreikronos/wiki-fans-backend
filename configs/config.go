@@ -60,6 +60,6 @@ func GetDB() DBConfig {
 	return cfg.DB
 }
 
-func getServerPort() string {
+func GetServerPort() string {
 	return cfg.API.Port
 }

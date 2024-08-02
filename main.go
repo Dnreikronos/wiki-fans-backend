@@ -6,7 +6,7 @@ import (
 
 	"github.com/Dnreikronos/wiki-fans-backend/configs"
 	"github.com/Dnreikronos/wiki-fans-backend/handlers"
-	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi"
 )
 
 func main() {
@@ -20,5 +20,5 @@ func main() {
 	r.Get("/", handlers.List)
 	r.Get("/{id}", handlers.Get)
 
-	http.ListenAndServe(fmt.Sprintf(":%s").configs.GetServerPort(), r)
+	http.ListenAndServe(fmt.Sprintf(":%s", configs.GetServerPort()), r)
 }
