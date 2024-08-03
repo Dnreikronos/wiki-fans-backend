@@ -1,18 +1,19 @@
-    <h1>Wiki-Fans API</h1>
+<h1>Wiki-Fans API</h1>
 
-    <p>This is an API developed in Go Lang to provide information to the Frontend being developed in the project <a href="https://github.com/Dnreikronos/wiki-fans-kuroko-no-basket">wiki-fans-kuroko-no-basket</a>.</p>
+<p>This is an API developed in Go Lang to provide information to the Frontend being developed in the project <a href="https://github.com/Dnreikronos/wiki-fans-kuroko-no-basket">wiki-fans-kuroko-no-basket</a>.</p>
 
-    <h2>Table of Contents</h2>
+
+<h2>Table of Contents</h2>
     <ul>
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#api-endpoints">API Endpoints</a></li>
     </ul>
 
-    <h2 id="introduction">Introduction</h2>
-    <p>The Wiki-Fans API is designed to serve as the backend for the wiki-fans-kuroko-no-basket frontend project. It provides basic comprehensive data and functionality to support a rich user experience for fans of the series Kuroko no Basket.</p>
 
-    <h2 id="features">Features</h2>
+<h2 id="introduction">Introduction</h2>
+    <p>The Wiki-Fans API is designed to serve as the backend for the wiki-fans-kuroko-no-basket frontend project. It provides basic comprehensive data and functionality to support a rich user experience for fans of the series Kuroko no Basket.</p>
+<h2 id="features">Features</h2>
     <ul>
         <li><strong>RESTful API:</strong> Provides a set of endpoints to interact with the data.</li>
         <li><strong>Chi Router:</strong> Utilizes the Chi router for fast and efficient routing.</li>
@@ -20,7 +21,7 @@
         <li><strong>Scalable:</strong> Built with Go for performance and scalability.</li>
     </ul>
 
-    <h2 id="api-endpoints">API Endpoints</h2>
+<h2 id="api-endpoints">API Endpoints</h2>
     <p>Here are some of the main endpoints provided by the API:</p>
     <ul>
         <li><strong>GET /api/characters:</strong> Retrieves a list of characters.</li>
