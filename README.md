@@ -20,6 +20,15 @@
         <li><strong>TOML Configuration:</strong> Supports configuration via TOML files for easy setup and customization.</li>
         <li><strong>Scalable:</strong> Built with Go for performance and scalability.</li>
     </ul>
+    
+<h2 id="things-learned"> Concepts Learned doing this project</h2>
+<p>Here are some concepts I learned developing this specific project:</p>
+    <ul>
+        <li><strong>How to manage environments variables;</li>
+        <li><strong>How to use the Godotenv library</li>
+        <li><strong>How to use Gitignore for hide some important informations</li>
+        <li><strong>How to create a PostgreSQL database using Docker</li>                
+    </ul>
 
 <h2 id="api-endpoints">API Endpoints</h2>
     <p>Here are some of the main endpoints provided by the API:</p>
