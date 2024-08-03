@@ -7,6 +7,7 @@ import (
 	"strconv"
 
 	"github.com/Dnreikronos/wiki-fans-backend/models"
+	"github.com/go-chi/chi"
 )
 
 func Get(w http.ResponseWriter, r *http.Request) {

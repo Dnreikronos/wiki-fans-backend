@@ -3,6 +3,6 @@ port = "9000"
 
 [database]
 host = "localhost"
-user = ""
-pass = ""
-name = "wiki-fans"
+user = "sgcd"
+pass = "9182"
+name = "wiki_fans"
