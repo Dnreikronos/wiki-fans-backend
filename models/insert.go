@@ -11,10 +11,10 @@ func Insert(characters Character) (id int64, err error) {
 	}
 	defer conn.Close()
 
-	sql := `INSERT INTO character (name, description, image, height, abilities, age, team, coach, gender, weight) VALUES ($1, $2, $3) RETURN id`
+	sql := `INSERT INTO character (id, age, name, description, height, abilities, team, coach, gender, weight) VALUES ($1, $2, $3) RETURN id`
 
-	err = conn.QueryRow(sql, characters.Name, characters.Description, characters.Image, characters.Height,
-		characters.Abilities, characters.Age, characters.Team, characters.Coach,
+	err = conn.QueryRow(sql, characters.Age, characters.Name, characters.Description,
+		characters.Height, characters.Abilities, characters.Team, characters.Coach,
 		characters.Gender, characters.Weight).Scan(&id)
 
 	return

@@ -2,6 +2,8 @@ package configs
 
 import (
 	"log"
+	"os"
+	"strings"
 
 	"github.com/joho/godotenv"
 	"github.com/spf13/viper"
@@ -44,10 +46,13 @@ func Load() error {
 
 	err := viper.ReadInConfig()
 	if err != nil {
-		if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
+		if err, ok := err.(viper.ConfigFileNotFoundError); !ok {
 			return err
 		}
 	}
+
+	// Substitua as variáveis de ambiente na configuração
+	replaceEnvVariables()
 
 	cfg = new(config)
 
@@ -63,8 +68,22 @@ func Load() error {
 		Database: viper.GetString("database.name"),
 	}
 
-	return nil
+	log.Printf("Database config: %+v\n", cfg.DB) // Adicione este log
 
+	return nil
+}
+
+func replaceEnvVariables() {
+	for _, key := range viper.AllKeys() {
+		value := viper.GetString(key)
+		if strings.HasPrefix(value, "${") && strings.HasSuffix(value, "}") {
+			envKey := value[2 : len(value)-1]
+			envValue := os.Getenv(envKey)
+			if envValue != "" {
+				viper.Set(key, envValue)
+			}
+		}
+	}
 }
 
 func GetDB() DBConfig {
