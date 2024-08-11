@@ -12,4 +12,5 @@ type Character struct {
 	Gender      string `json:"Gender"`
 	Weight      string `json:"weight"`
 	Image       string `json:"image"`
+	GIF         string `json:"gif"`
 }
