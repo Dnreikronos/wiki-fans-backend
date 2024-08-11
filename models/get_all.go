@@ -16,7 +16,7 @@ func GetAll() (characters []Character, err error) {
 	}
 	for rows.Next() {
 		var character Character
-		err = rows.Scan(&character.ID, &character.Age, &character.Name, &character.Description, &character.Height, &character.Abilities, &character.Team, &character.Coach, &character.Gender, &character.Weight)
+		err = rows.Scan(&character.ID, &character.Age, &character.Name, &character.Description, &character.Height, &character.Abilities, &character.Team, &character.Coach, &character.Gender, &character.Weight, &character.Image)
 		if err != nil {
 			continue
 		}
