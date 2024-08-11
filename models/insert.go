@@ -15,7 +15,7 @@ func Insert(characters Character) (id int64, err error) {
 
 	err = conn.QueryRow(sql, characters.Age, characters.Name, characters.Description,
 		characters.Height, characters.Abilities, characters.Team, characters.Coach,
-		characters.Gender, characters.Weight, characters.Image).Scan(&id)
+		characters.Gender, characters.Weight, characters.Image, characters.GIF).Scan(&id)
 
 	return
 }
