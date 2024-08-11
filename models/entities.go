@@ -11,4 +11,5 @@ type Character struct {
 	Coach       string `json:"coach"`
 	Gender      string `json:"Gender"`
 	Weight      string `json:"weight"`
+	Image       string `json:"image"`
 }
