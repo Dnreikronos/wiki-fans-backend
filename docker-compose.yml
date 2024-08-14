@@ -4,10 +4,6 @@ services:
   db:
     image: postgres:latest
     container_name: wiki
-    environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASS}
-      POSTGRES_DB: wiki
     ports:
       - "5432:5432"
     networks:
