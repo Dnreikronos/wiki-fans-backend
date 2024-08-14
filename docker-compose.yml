@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: database
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: wiki
+    ports:
+      - "5432:5432"
+    networks:
+      - my-network
+
+  app:
+    build: .
+    container_name: application
+    ports:
+      - "9000:9000"
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_HOST: my-postgres
+      DB_NAME: wiki
+      API_PORT: "9000"
+    depends_on:
+      - db
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
