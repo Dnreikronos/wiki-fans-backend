@@ -12,7 +12,12 @@ services:
       - "5432:5432"
     networks:
       - my-network
+    volumes:
+      - db_data:/var/lib/postgresql/data 
 
 networks:
   my-network:
     driver: bridge
+
+volumes:
+  db_data: 
