@@ -18,7 +18,7 @@ services:
     build: .
     container_name: wiki_apl
     environment:
-      - DATABASE_URL=postgres://DB_USER:DB_PASS@db:5432/wiki?sslmode=disable
+      - DATABASE_URL=${DATABASE_URL}
     depends_on:
       - db
     ports:
